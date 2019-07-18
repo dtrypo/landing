@@ -2,15 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="owl.carousel.min.css">
-    <link rel="stylesheet" href="owl.theme.default.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $.scrollify({
+                section: ".scrolled",
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -19,214 +24,177 @@
         <nav class="nav">
             <div class="nav-logo">
                 <a href="/" id="logo" title="myjobnow βρες δουλεια"><img src="./img/mjnlogo.png"
-                        srcset="./img/mjnlogo-retina.png 2x" alt="myjobnow logo" width="75px" height="75px">
+                        srcset="./img/mjnlogo-retina.png 2x" alt="myjobnow logo" width="75px" height="75px" />
                 </a>
             </div>
             <div class="nav-menu">
                 <ul class="flex flex-end">
                     <li><a class="flex" href="/jobs/">Αγγελίες</a></li>
-                    <li><a class="flex" href="/evresi-prosopikou/">Βρείτε Προσωπικό</a></li>
+                    <li>
+                        <a class="flex" href="/evresi-prosopikou/">Βρείτε Προσωπικό</a>
+                    </li>
                     <li><a class="flex" href="/blog/">Blog</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div style="background-color: #fafafa;">
-        <section class="hero-form">
-            <div class="wrapper-site flex flex-start">
-                <div class="heroText-box">
-                    <h1>Βρες το προσωπικό που θέλεις</h1>
+    <main>
+        <section class="slide1 section scrolled">
+            <div class="wrapper-site max-window">
+                <h1>A solution to a growing problem</h1>
+                <ul class="box-listing flex">
+                    <li>
+                        <div class="list-number">
+                            1
+                        </div>
+                        <div class="list-text">
+                            Blue collar industries have extremely high turnover, which
+                            leads to high frequencies of hires and employment transitions.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-number">
+                            2
+                        </div>
+                        <div class="list-text">
+                            Limited position exposure from WoM and excessive exposure from
+                            job listing sites
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-number">
+                            3
+                        </div>
+                        <div class="list-text">
+                            Communication through (annoying) phone calls for first
+                            screening
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-number">
+                            4
+                        </div>
+                        <div class="list-text">
+                            No easy access to candidates who live nearby the business
+                            (hyperlocal recruiting)
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="slide2 scrolled">
+            <h1>The best recruitment solution</h1>
+            <div class="wrapper-site flex slide2Box">
+
+                <div class="slide2-left">
                     <ul>
-                        <li>Ρύθμισε τις προτιμήσεις σου σε δευτερόλεπτα</li>
-                        <li>Λάβε αιτήσεις από τα πρώτα λεπτά</li>
-                        <li>Κάλυψε τις ανάγκες σου σήμερα</li>
+                        <li>
+                            <h2>Save time by</h2>
+                            <ul>
+                                <li>
+                                    Selecting suitable candidates before engaging with them
+                                </li>
+                                <li>
+                                    Location based talent acquisition to avoid unsuitable
+                                    candidates
+                                </li>
+                                <li>In-app communication – Chat</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2>Easy Decision Making</h2>
+                            <ul>
+                                <li>
+                                    Homogeneous candidate profile vs. redundant CVs for blue
+                                    collar positions
+                                </li>
+                                <li>
+                                    Single point of application management with applicants per
+                                    location
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
-                    <p>Ξέχνα την ταλαιπωρία από τη διαδικασία αναζήτησης προσωπικού και αφοσιώσου στην ανάπτυξη της επιχείρησής σου.
-                    </p>
+                </div>
+                <div class="slide2-right">
+                    <img src="/landingEnd/img/Screen3.png" alt="desktop">
                 </div>
             </div>
         </section>
-        <section class="section">
-            <div class="slide-bg">
-                <div class="wrapper-site">
-                    <h2 class="headline" style="color: #fff;">Συνδέουμε τους κατάληλους υποψήφιους με τις αντίστοιχες
-                        θέσεις
-                    </h2>
-                    <div class="flex steps-slide">
-                        <div class="left-slide">
-                            <img id="slideImage1" class="mySlides" src="img/Screen1.png" alt="app">
-                        </div>
-                        <div class="right-slide">
-                            <div class="slide-text">
-                                <div class="mySlidesText">
-                                    <h3>1. Συμπληρώνεις τις προτιμήσεις σου</h3>
-                                    <ul>
-                                        <li>Φύλο, Ηλικία, κτλ.</li>
-                                        <li>Περιοχή Διαμονής</li>
-                                        <li>Εργασιακή Εμπειρία</li>
-                                        <li>Γλώσσες</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <section class="slide2 scrolled">
+            <h1>Connect Matching Candidates to Relevant Jobs</h1>
+            <div class="wrapper-site flex slide2Box">
+                <div class="slide2-left">
+                    <ul>
+                        <li>
+                            <h2>Enter Your Preferences</h2>
+                            <ul>
+                                <li>
+                                    Demographics
+                                </li>
+                                <li>
+                                    Location
+                                </li>
+                                <li>Work Experience</li>
+                                <li>Languages</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2>MyJobNow finds the most suitable candidates</h2>
+                            <ul>
+                                <li>
+                                    Machine Learning
+                                </li>
+                                <li>
+                                    Push Notifications
+                                </li>
+                                <li>
+                                    Email
+                                </li>
+                                <li>
+                                    In App Promotion
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="slide2-right">
+                    <img src="/landingEnd/img/Screen1.png" alt="desktop">
                 </div>
             </div>
         </section>
-        <section class="section">
-            <div class="landStep2">
-                <div class="wrapper-site">
-                    <div class="flex steps-slide">
-                        <div class="right-slide">
-                            <div class="slide-text">
-                                <div class="mySlidesText">
-                                    <h3>2. Βρίσκουμε τους ιδανικούς υποψήφιους για σένα χρησιμοποιώντας</h3>
-                                    <ul>
-                                        <li>Machine Learning</li>
-                                        <li>Push Notifications</li>
-                                        <li>Email</li>
-                                        <li>In-App Promotion</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="left-slide">
-                            <img id="slideImage1" class="mySlides" src="img/Screen2.png" alt="app">
-                        </div>
-                    </div>
+        <section class="section scrolled">
+            <h1>We are doing great in less than a year</h1>
+            <div class="wrapper-site flex slide4">
+                <div class="img-holder">
+                        <img src="gap.png" alt="gap">
+                </div>
+                <div class="img-holder">
+                        <img src="dominos.png" alt="dominos">
+                </div>
+                <div class="img-holder">
+                        <img src="starbucks.png" alt="starbucks">
+                </div>
+                <div class="img-holder">
+                        <img src="vodafone.png" alt="vodafone">
+                </div>
+                <div class="img-holder">
+                    <img src="goodys.png" alt="goodys">
+                </div>
+                <div class="img-holder">
+                        <img src="coffee-island.jpg" alt="coffee-island">
+                </div>
+                <div class="img-holder">
+                        <img src="grigoris.png" alt="grigoris">
+                </div>
+                <div class="img-holder">
+                        <img src="fridays.png" alt="fridays">
                 </div>
             </div>
         </section>
-        <section class="section">
-            <div class="slide-bg">
-                <div class="wrapper-site">
-                    <div class="flex steps-slide">
-                        <div class="left-slide">
-                            <img id="slideImage1" class="mySlides" src="img/screen3.png" alt="app">
-                        </div>
-                        <div class="right-slide">
-                            <div class="slide-text">
-                                <div class="mySlidesText">
-                                    <h3>3. Σύγκρινε τα προφίλ των υποψηφίων εύκολα και διάλεξε τον επόμενο συνεργάτη σου.</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-                <div class="wrapper-site industries">
-                    <h2 class="headline">5+1 κλάδοι</h2>
-                    <div class="owl-carousel owl-carousel10 owl-theme">
-                        <div class="item">
-                            <div class="boxSlide">
-                                <h3>Εστίαση</h3>
-                                <img src="img/rest.jpg" alt="">
-                                <ul>
-                                    <li>
-                                        Barista - Μπουφέ
-                                    </li>
-                                    <li>
-                                        Bartenders
-                                    </li>
-                                </ul>
-                                <a class="readMore" href="https://app.myjobnow.com/signin">Δες τα όλα</a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="boxSlide">
-                                <h3>Τουρισμός</h3>
-                                <img src="img/hotel.jpg" alt="">
-                                <ul>
-                                    <li>
-                                        Ρεσεψιόν
-                                    </li>
-                                    <li>
-                                        Καμαριέρες
-                                    </li>
-                                </ul>
-                                <a class="readMore" href="https://app.myjobnow.com/signin">Δες τα όλα</a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="boxSlide">
-                                <h3>Λιανική</h3>
-                                <img src="img/sales.jpg" alt="">
-                                <ul>
-                                    <li>
-                                        Πωλητές
-                                    </li>
-                                    <li>
-                                        Ταμίες
-                                    </li>
-                                </ul>
-                                <a class="readMore" href="https://app.myjobnow.com/signin">Δες τα όλα</a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="boxSlide">
-                                <h3>Ομορφιά</h3>
-                                <img src="img/beaty.jpg" alt="">
-                                <ul>
-                                    <li>
-                                        Κομμωτική
-                                    </li>
-                                    <li>
-                                        Αισθητική
-                                    </li>
-                                </ul>
-                                <a class="readMore" href="https://app.myjobnow.com/signin">Δες τα όλα</a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="boxSlide">
-                                <h3>Logistics</h3>
-                                <img src="img/logistic.jpg" alt="">
-                                <ul>
-                                    <li>
-                                        Οδηγοί
-                                    </li>
-                                    <li>
-                                        Αποθηκάριοι
-                                    </li>
-                                </ul>
-                                <a class="readMore" href="https://app.myjobnow.com/signin">Δες τα όλα</a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="boxSlide">
-                                <h3>Άλλα</h3>
-                                <img src="img/other.jpg" alt="">
-                                <ul>
-                                    <li>
-                                        Υπάλληλοι Γραφείου
-                                    </li>
-                                    <li>
-                                        Τηλεφωνικό Κέντρο
-                                    </li>
-                                </ul>
-                                <a class="readMore" href="https://app.myjobnow.com/signin">Δες τα όλα</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        <section class="blueCta">
-            <div class="wrapper-site">
-                <h2>Βρες προσωπικό σήμερα</h2>
-                <p>Μπες στην εφαρμογή και βρες τον κατάλληλο υποψήφιο για τη θέση που θες να καλύψεις.</p>
-                <a href="https://app.myjobnow.com/signin" target="_blank" class="whiteNude">
-                    ΜΠΕΣ ΕΔΩ
-                </a>
-            </div>
-        </section>
-        
-    </div>
+    </main>
+    <script src="/landingEnd/jquery.scrollify.js"></script>
+    <script src="myapp.js"></script>
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="owl.carousel.min.js"></script>
-<script src="app.js"></script>
 
 </html>
