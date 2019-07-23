@@ -41,7 +41,7 @@ function formSub() {
             })
             .then(function (stats) {
                 if (!stats.found_js_pop) {
-                    document.getElementById("message").innerHTML = "Sufficient data for this location are not available.";
+                    document.getElementById("message").innerHTML = "Sufficient data for this location are not available. We display location independent data";
                     labels = stats.age_dist.labels;
                     data = stats.age_dist.values;
                     var temp = data.map(function (element) {
