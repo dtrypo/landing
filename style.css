@@ -449,7 +449,7 @@ body {
 }
 
 .outer-bar{
-    border: rgba(38, 162, 240, .5) 1px solid;
+    border: rgba(38, 162, 240, .5) 2px solid;
 }
 
 .inner-bar{
