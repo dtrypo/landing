@@ -460,6 +460,6 @@ body {
 .btnChart{
     cursor: pointer;
     background-color: rgba(38, 162, 240, .5);
-    border: #26a2f0 1px solid;
+    border: #26a2f0 2px solid;
     padding: 1rem 1.6rem;
 }

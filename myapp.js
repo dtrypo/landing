@@ -141,10 +141,10 @@ function formSub() {
                     label: 'Job Seeker Years of Experience',
                     data: y,
                     backgroundColor: [
-                        'rgba(25, 99, 132, 0.2)'
+                        'rgba(38, 162, 240, .2)'
                     ],
                     borderColor: [
-                        'rgba(25, 99, 132, 1)'
+                        'rgba(38, 162, 240, 1)'
                     ],
                     borderWidth: 1
                 }]
