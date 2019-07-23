@@ -41,7 +41,7 @@ function formSub() {
             })
             .then(function (stats) {
                 if (!stats.found_js_pop) {
-                    document.getElementById("message").innerHTML = "Δεν υπάρχουν αρκετά στοιχεία για αυτή την περιοχή σας δείχνουμε στατιστικά για το πλήθος των στοιχείων που έχουμε.";
+                    document.getElementById("message").innerHTML = "Sufficient data for this location are not available.";
                     labels = stats.age_dist.labels;
                     data = stats.age_dist.values;
                     var temp = data.map(function (element) {
