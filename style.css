@@ -446,3 +446,12 @@ body {
         transform: rotate(360deg);
     }
 }
+
+.outer-bar{
+    border: rgba(38, 162, 240, .5) 1px solid;
+}
+
+.inner-bar{
+    background-color: rgba(38, 162, 240, .2);
+    padding: .3rem 1rem;
+}
