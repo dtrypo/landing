@@ -410,6 +410,7 @@ body {
 
 .field-box label {
     display: block;
+    margin-bottom: .5rem;
 }
 
 .loader {
