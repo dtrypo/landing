@@ -455,3 +455,10 @@ body {
     background-color: rgba(38, 162, 240, .2);
     padding: .3rem 1rem;
 }
+
+.btnChart{
+    cursor: pointer;
+    background-color: rgba(38, 162, 240, .5);
+    border: #26a2f0 1px solid;
+    padding: 1rem 1.6rem;
+}
