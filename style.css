@@ -330,8 +330,8 @@ section h1 {
 }
 
 body {
-    background-image: url(shutterstock_530294110\ .jpg);
-    background-position: center center;
+    background-image: url(bodyBg.jpg);
+    background-position: right center;
     background-size: cover;
     background-repeat: no-repeat;
 }
