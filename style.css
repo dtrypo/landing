@@ -262,8 +262,8 @@ h3 {
 
 /* navbar end */
 
-section {
-    height: 100vh;
+section{
+    min-height: 100vh;
 }
 
 .slide1 {
@@ -362,13 +362,17 @@ body {
 }
 
 .img-holder {
-    width: 20%;
-    min-width: 18rem;
+    width: 16%;
+    min-width: 16rem;
     margin: 4rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     filter: grayscale(1);
+}
+
+.img-holder img{
+    width: 16rem;
 }
 
 @media screen and (max-width: 890px) {
