@@ -19,6 +19,74 @@
 
 var data = [];
 var labels = [];
+var skills=[{
+    id:1,en:'FOOD DELIVERY', gr:'DELIVERY'
+},
+{
+    id:2,en:'CHEF AND COOK', gr:'ΜΑΓΕΙΡΕΣ'
+},
+{
+    id:3,en:'COOK FAST FOOD', gr:'ΨΗΣΤΕΣ - ΠΑΡΑΣΚΕΥΑΣΤΕΣ'
+},
+{
+    id:4,en:'BARISTA', gr:'BARISTA - ΜΠΟΥΦΕ'
+},
+{
+    id:5,en:'KITCHEN PORTER', gr:'ΛΑΝΤΖΑ'
+},
+{
+    id:6,en:'WAITER - WAITRESS', gr:'ΣΕΡΒΙΤΟΡΟΙ'
+},
+{
+    id:7,en:'BAKERS', gr:'ΑΡΤΟΠΟΙΟΙ'
+},
+{
+    id:8,en:'HOST - MAITRE', gr:'ΥΠΟΔΟΧΗ - ΜΕΤΡ'
+},
+{
+    id:9,en:'SALES CASHIERS', gr:'ΠΩΛΗΤΕΣ - ΤΑΜΙΕΣ'
+},
+{
+    id:10,en:'CALL CENTER', gr:'ΤΗΛΕΦΩΝΙΚΟ ΚΕΝΤΡΟ'
+},
+{
+    id:11,en:'HOUSEKEEPING', gr:'ΚΑΜΑΡΙΕΡΑ'
+},
+{
+    id:12,en:'RECEPTIONIST', gr:'ΡΕΣΕΨΙΟΝ'
+},
+{
+    id:13,en:'HAIRDRESSING', gr:'ΚΟΜΜΩΤΙΚΗ'
+},
+{
+    id:14, en:'BEAUTY', gr:'ΑΙΣΘΗΤΙΚΗ'
+},
+{
+    id:15, en:'BARTENDER', gr:'BARTENDER'
+},
+{
+    id:16, en:'OTHER SKILL', gr:'ΑΛΛΟ'
+},
+{
+    id:18, en:'OFFICE ADMIN', gr:'ΥΠΑΛΛΗΛΟΙ ΓΡΑΦΕΙΟΥ'
+},
+{
+    id:19, en:'CLEANING', gr:'ΚΑΘΑΡΙΣΜΟΣ'
+},
+{
+    id:20, en:'LOGISTICS', gr:'ΑΠΟΘΗΚΑΡΙΟΙ'
+},
+{
+    id:21, en:'DRIVER', gr:'ΟΔΗΓΟΙ'
+}
+];
+
+console.log(skills);
+
+var skill = document.getElementById('skill');
+skills.forEach(element => {
+    skill.innerHTML += `<option value="${element.id}">${element.en}</option>`
+});
 
 
 function formSub() {
@@ -40,6 +108,7 @@ function formSub() {
                 return res.json();
             })
             .then(function (stats) {
+                console.log(stats);
                 if (!stats.found_js_pop) {
                     document.getElementById("message").innerHTML = "Sufficient data for this location are not available. We display location independent data.";
                     labels = stats.age_dist.labels;
