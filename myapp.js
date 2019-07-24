@@ -1,57 +1,3 @@
-// $.scrollify({
-//     section: ".section",
-//     sectionName: "section-name",
-//     interstitialSection: "",
-//     easing: "easeOutExpo",
-//     scrollSpeed: 1100,
-//     offset: 0,
-//     scrollbars: true,
-//     standardScrollElements: "",
-//     setHeights: true,
-//     overflowScroll: true,
-//     updateHash: true,
-//     touchScroll: true,
-//     before: function () { },
-//     after: function () { },
-//     afterResize: function () { },
-//     afterRender: function () { }
-// });
-
-// var slideIndex = 1;
-// showDivs(slideIndex);
-
-// var isPaused = false;
-
-// function plusDivs(n) {
-//     showDivs(slideIndex += n);
-// }
-
-// function showDivs(n) {
-//     var i;
-//     var x = document.getElementsByClassName("mySlides");
-//     if (n > x.length) { slideIndex = 1 };
-//     if (n < 1) { slideIndex = x.length };
-//     for (i = 0; i < x.length; i++) {
-//         x[i].style.display = "none";
-//     }
-//     x[slideIndex - 1].style.display = "block";
-// }
-
-// setInterval(function () {
-//     if (!isPaused) {
-//         plusDivs(+1);
-//     }
-// }, 3500);
-
-// function stopLoop() {
-//     isPaused = true;
-// }
-
-// function startLoop() {
-//     isPaused = false;
-// }
-
-
 
 var skills = [{
     id: 1, en: 'FOOD DELIVERY', gr: 'DELIVERY'
@@ -115,6 +61,162 @@ var skills = [{
 }
 ];
 
+var locations = [
+    {
+        id:80, en: "ATTIKI", gr: "ΑΤΤΙΚΗ"
+    },
+    {
+        id:103, en: "THESSALONIKI", gr: "ΘΕΣΣΑΛΟΝΙΚΗ"
+    },
+    {
+        id:56, en: "PIERIA", gr: "ΠΙΕΡΙΑ"
+    },
+    {
+        id:58, en: "IOANNINA", gr: "ΙΩΑΝΝΙΝΑ"
+    },
+    {
+        id:59, en: "PELLA", gr: "ΠΕΛΛΑ"
+    },
+    {
+        id:60, en: "EVRITANIA", gr: "ΕΥΡΥΤΑΝΙΑ"
+    },
+    {
+        id:61, en: "FOKIDA", gr: "ΦΩΚΙΔΑ"
+    },
+    {
+        id:62, en: "AITOLOKARNANIA", gr: "ΑΙΤΟΛΟΚΑΡΝΑΝΙΑ"
+    },
+    {
+        id:63, en: "LARISA", gr: "ΛΑΡΙΣΑ"
+    },
+    {
+        id:64, en: "LAKONIA", gr: "ΛΑΚΩΝΙΑ"
+    },
+    {
+        id:65, en: "HRAKLEIO", gr: "ΗΡΑΚΛΕΙΟ"
+    },
+    {
+        id:66, en: "EVROS", gr: "ΕΒΡΟΣ"
+    },
+    {
+        id:67, en: "SAMOS", gr: "ΣΑΜΟΣ"
+    },
+    {
+        id:68, en: "PEIRAIAS", gr: "ΠΕΙΡΑΙΑΣ"
+    },
+    {
+        id:69, en: "XALKIDIKI", gr: "ΧΑΛΚΙΔΙΚΗ"
+    },
+    {
+        id:70, en: "SERRES", gr: "ΣΕΡΡΕΣ"
+    },
+    {
+        id:71, en: "KOZANI", gr: "ΚΟΖΑΝΗ"
+    },
+    {
+        id:72, en: "IMATHIA", gr: "ΗΜΑΘΙΑ"
+    },
+    {
+        id:73, en: "FTHIOTIDA", gr: "ΦΘΙΩΤΙΔΑ"
+    },
+    {
+        id:74, en: "CHIOS", gr: "ΧΙΟΣ"
+    },
+    {
+        id:75, en: "AXAIA", gr: "ΑΧΑΙΑ"
+    },
+    {
+        id:76, en: "FLORINA", gr: "ΦΛΩΡΙΝΑ"
+    },
+    {
+        id:77, en: "PREVEZA", gr: "ΠΡΕΒΕΖΑ"
+    },
+    {
+        id:78, en: "EVIA", gr: "ΕΥΒΟΙΑ"
+    },
+    {
+        id:79, en: "GREVENA", gr: "ΓΡΕΒΕΝΑ"
+    },
+    {
+        id:82, en: "KEFALONIA", gr: "ΚΕΦΑΛΛΟΝΙΑ"
+    },
+    {
+        id:83, en: "RODOPI", gr: "ΡΟΔΟΠΗ"
+    },
+    {
+        id:84, en: "KORINTHOS", gr: "ΚΟΡΙΝΘΟΣ"
+    },
+    {
+        id:85, en: "CHANIA", gr: "ΧΑΝΙΑ"
+    },
+    {
+        id:86, en: "LESVOS", gr: "ΛΕΣΒΟΣ"
+    },
+    {
+        id:87, en: "ARKADIA", gr: "ΑΡΚΑΔΙΑ"
+    },
+    {
+        id:88, en: "KASTORIA", gr: "ΚΑΣΤΟΡΙΑ"
+    },
+    {
+        id:89, en: "ZAKINTHOS", gr: "ΖΑΚΥΝΘΟΣ"
+    },
+    {
+        id:90, en: "DRAMA", gr: "ΔΡΑΜΑ"
+    },
+    {
+        id:91, en: "KYKLADES", gr: "ΚΥΚΛΑΔΕΣ"
+    },
+    {
+        id:93, en: "VIOTIA", gr: "ΒΟΙΩΤΙΑ"
+    },
+    {
+        id:94, en: "LASITHI", gr: "ΛΑΣΙΘΙ"
+    },
+    {
+        id:95, en: "RETHIMNO", gr: "ΡΕΘΥΜΝΟ"
+    },
+    {
+        id:96, en: "MAGNISIA", gr: "ΜΑΓΝΗΣΙΑ"
+    },
+    {
+        id:97, en: "ARGOLIDA", gr: "ΑΡΓΟΛΙΔΑ"
+    },
+    {
+        id:98, en: "KAVALA", gr: "ΚΑΒΑΛΑ"
+    },
+    {
+        id:99, en: "ILIA", gr: "ΗΛΕΙΑ"
+    },
+    {
+        id:100, en: "KARDITSA", gr: "ΚΑΡΔΙΤΣΑ"
+    },
+    {
+        id:101, en: "ARTA", gr: "ΑΡΤΑ"
+    },
+    {
+        id:104, en: "XANTHI", gr: "ΞΑΝΘΗ"
+    },
+    {
+        id:105, en: "DODEKANISA", gr: "ΔΩΔΕΚΑΝΗΣΑ"
+    },
+    {
+        id:106, en: "KILKIS", gr: "ΚΙΛΚΙΣ"
+    },
+    {
+        id:107, en: "MESSINIA", gr: "ΜΕΣΣΗΝΙΑ"
+    },
+    {
+        id:108, en: "THESPROTIA", gr: "ΘΕΣΠΡΩΤΙΑ"
+    },
+    {
+        id:109, en: "TRIKALA", gr: "ΤΡΙΚΑΛΑ"
+    },
+    {
+        id:110, en: "KERKYRA", gr: "ΚΕΡΚΥΡΑ"
+    }
+]
+
 console.log(skills);
 
 var skill = document.getElementById('skill');
@@ -122,6 +224,10 @@ skills.forEach(element => {
     skill.innerHTML += `<option value="${element.id}">${element.en}</option>`
 });
 
+var loc = document.getElementById('location');
+locations.forEach(element => {
+    loc.innerHTML += `<option value="${element.id}">${element.en}</option>`
+});
 
 function formSub(first) {
     if (!first) {
