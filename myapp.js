@@ -17,6 +17,8 @@
 //     afterRender: function () { }
 // });
 
+formSub(first = true);
+
 var skills = [{
     id: 1, en: 'FOOD DELIVERY', gr: 'DELIVERY'
 },
@@ -87,14 +89,17 @@ skills.forEach(element => {
 });
 
 
-function formSub() {
-    var loaders = document.querySelectorAll('.loader');
-    loaders[0].style.display = 'block';
-    loaders[1].style.display = 'block';
-    setTimeout(function () {
-        loaders[0].style.display = 'none';
-        loaders[1].style.display = 'none';
-    }, 3500);
+function formSub(first) {
+    if (!first) {
+        var loaders = document.querySelectorAll('.loader');
+        loaders[0].style.display = 'block';
+        loaders[1].style.display = 'block';
+        setTimeout(function () {
+            loaders[0].style.display = 'none';
+            loaders[1].style.display = 'none';
+        }, 3500);
+    }
+
     var skill = document.getElementById('skill').value;
     var location = document.getElementById('location').value;
     console.log(skill);
@@ -111,16 +116,10 @@ function formSub() {
                     document.getElementById("message").innerHTML = "Sufficient data for this location are not available. We display location independent data.";
                     labels = stats.age_dist.labels;
                     data = stats.age_dist.values;
-                    var temp = data.map(function (element) {
-                        return element * 100;
-                    });
-                    data = temp;
+
                     x = stats.xp_dist.labels;
                     y = stats.xp_dist.values;
-                    var temp = y.map(function (element) {
-                        return element * 100;
-                    });
-                    y = temp;
+
                     js = stats.js_number;
                     charts();
                     chart2();
@@ -143,8 +142,12 @@ function formSub() {
 
 
     function charts() {
+        document.getElementById("canvas1").innerHTML = '<canvas id="myChart" width="400" height="400" style="max-width: 400px; max-height: 400px;"></canvas>';
         var ctx = document.getElementById('myChart').getContext('2d');
-
+        var temp = data.map(function (element) {
+            return Math.round(element * 100, 2);
+        });
+        data = temp;
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
@@ -215,8 +218,12 @@ function formSub() {
     }
 
     function chart2() {
+        document.getElementById("canvas2").innerHTML = '<canvas id="myChart2" width="400" height="400" style="max-width: 400px; max-height: 400px;"></canvas>';
         var ctx = document.getElementById('myChart2').getContext('2d');
-
+        var temp = y.map(function (element) {
+            return Math.round(element * 1000) / 10;
+        });
+        y = temp;
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
