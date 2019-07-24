@@ -397,8 +397,6 @@ body {
 }
 
 .field-box {
-    display: block;
-    width: 100%;
     margin: 1.6rem 0;
 }
 
@@ -463,7 +461,6 @@ body {
 
 .btnChart{
     cursor: pointer;
-    background-color: rgba(38, 162, 240, .5);
-    border: #26a2f0 2px solid;
+    background-color: rgb(38, 162, 240);
     padding: 1rem 1.6rem;
 }

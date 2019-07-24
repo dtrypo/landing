@@ -17,67 +17,65 @@
 //     afterRender: function () { }
 // });
 
-var data = [];
-var labels = [];
-var skills=[{
-    id:1,en:'FOOD DELIVERY', gr:'DELIVERY'
+var skills = [{
+    id: 1, en: 'FOOD DELIVERY', gr: 'DELIVERY'
 },
 {
-    id:2,en:'CHEF AND COOK', gr:'ΜΑΓΕΙΡΕΣ'
+    id: 2, en: 'CHEF AND COOK', gr: 'ΜΑΓΕΙΡΕΣ'
 },
 {
-    id:3,en:'COOK FAST FOOD', gr:'ΨΗΣΤΕΣ - ΠΑΡΑΣΚΕΥΑΣΤΕΣ'
+    id: 3, en: 'COOK FAST FOOD', gr: 'ΨΗΣΤΕΣ - ΠΑΡΑΣΚΕΥΑΣΤΕΣ'
 },
 {
-    id:4,en:'BARISTA', gr:'BARISTA - ΜΠΟΥΦΕ'
+    id: 4, en: 'BARISTA', gr: 'BARISTA - ΜΠΟΥΦΕ'
 },
 {
-    id:5,en:'KITCHEN PORTER', gr:'ΛΑΝΤΖΑ'
+    id: 5, en: 'KITCHEN PORTER', gr: 'ΛΑΝΤΖΑ'
 },
 {
-    id:6,en:'WAITER - WAITRESS', gr:'ΣΕΡΒΙΤΟΡΟΙ'
+    id: 6, en: 'WAITER - WAITRESS', gr: 'ΣΕΡΒΙΤΟΡΟΙ'
 },
 {
-    id:7,en:'BAKERS', gr:'ΑΡΤΟΠΟΙΟΙ'
+    id: 7, en: 'BAKERS', gr: 'ΑΡΤΟΠΟΙΟΙ'
 },
 {
-    id:8,en:'HOST - MAITRE', gr:'ΥΠΟΔΟΧΗ - ΜΕΤΡ'
+    id: 8, en: 'HOST - MAITRE', gr: 'ΥΠΟΔΟΧΗ - ΜΕΤΡ'
 },
 {
-    id:9,en:'SALES CASHIERS', gr:'ΠΩΛΗΤΕΣ - ΤΑΜΙΕΣ'
+    id: 9, en: 'SALES CASHIERS', gr: 'ΠΩΛΗΤΕΣ - ΤΑΜΙΕΣ'
 },
 {
-    id:10,en:'CALL CENTER', gr:'ΤΗΛΕΦΩΝΙΚΟ ΚΕΝΤΡΟ'
+    id: 10, en: 'CALL CENTER', gr: 'ΤΗΛΕΦΩΝΙΚΟ ΚΕΝΤΡΟ'
 },
 {
-    id:11,en:'HOUSEKEEPING', gr:'ΚΑΜΑΡΙΕΡΑ'
+    id: 11, en: 'HOUSEKEEPING', gr: 'ΚΑΜΑΡΙΕΡΑ'
 },
 {
-    id:12,en:'RECEPTIONIST', gr:'ΡΕΣΕΨΙΟΝ'
+    id: 12, en: 'RECEPTIONIST', gr: 'ΡΕΣΕΨΙΟΝ'
 },
 {
-    id:13,en:'HAIRDRESSING', gr:'ΚΟΜΜΩΤΙΚΗ'
+    id: 13, en: 'HAIRDRESSING', gr: 'ΚΟΜΜΩΤΙΚΗ'
 },
 {
-    id:14, en:'BEAUTY', gr:'ΑΙΣΘΗΤΙΚΗ'
+    id: 14, en: 'BEAUTY', gr: 'ΑΙΣΘΗΤΙΚΗ'
 },
 {
-    id:15, en:'BARTENDER', gr:'BARTENDER'
+    id: 15, en: 'BARTENDER', gr: 'BARTENDER'
 },
 {
-    id:16, en:'OTHER SKILL', gr:'ΑΛΛΟ'
+    id: 16, en: 'OTHER SKILL', gr: 'ΑΛΛΟ'
 },
 {
-    id:18, en:'OFFICE ADMIN', gr:'ΥΠΑΛΛΗΛΟΙ ΓΡΑΦΕΙΟΥ'
+    id: 18, en: 'OFFICE ADMIN', gr: 'ΥΠΑΛΛΗΛΟΙ ΓΡΑΦΕΙΟΥ'
 },
 {
-    id:19, en:'CLEANING', gr:'ΚΑΘΑΡΙΣΜΟΣ'
+    id: 19, en: 'CLEANING', gr: 'ΚΑΘΑΡΙΣΜΟΣ'
 },
 {
-    id:20, en:'LOGISTICS', gr:'ΑΠΟΘΗΚΑΡΙΟΙ'
+    id: 20, en: 'LOGISTICS', gr: 'ΑΠΟΘΗΚΑΡΙΟΙ'
 },
 {
-    id:21, en:'DRIVER', gr:'ΟΔΗΓΟΙ'
+    id: 21, en: 'DRIVER', gr: 'ΟΔΗΓΟΙ'
 }
 ];
 
@@ -126,19 +124,7 @@ function formSub() {
                     js = stats.js_number;
                     charts();
                     chart2();
-                    var elem = document.getElementById("myBar");
-                    var width = 20;
-                    var id = setInterval(frame, 10);
-                    function frame() {
-                        if (width >= 100) {
-                            clearInterval(id);
-                        } else {
-                            width++;
-                            data = js / 100;
-                            elem.style.width = width + '%';
-                            elem.innerHTML = (data * width * 1).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                        }
-                    }
+                    document.getElementById("js").innerHTML = js
                 } else {
                     document.getElementById("message").innerHTML = "";
                     labels = stats.age_dist.labels;
@@ -148,19 +134,7 @@ function formSub() {
                     js = stats.js_number;
                     charts();
                     chart2();
-                    var elem = document.getElementById("myBar");
-                    var width = 20;
-                    var id = setInterval(frame, 30);
-                    function frame() {
-                        if (width >= 100) {
-                            clearInterval(id);
-                        } else {
-                            width++;
-                            data = js / 100;
-                            elem.style.width = width + '%';
-                            elem.innerHTML = (data * width * 1).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                        }
-                    }
+                    document.getElementById("js").innerHTML = js
                 }
             })
     }
@@ -172,26 +146,67 @@ function formSub() {
         var ctx = document.getElementById('myChart').getContext('2d');
 
         var myChart = new Chart(ctx, {
-            type: 'line',
+            type: 'bar',
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'Job Seeker age Distribution',
                     data: data,
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)'
-                    ],
+                    backgroundColor: '#26a2f0',
+                    borderColor: '#26a2f0',
                     borderWidth: 1
                 }]
             },
             options: {
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem) {
+                            return tooltipItem.yLabel;
+                        }
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Users Age Distribution',
+                    fontColor: '#26a2f0'
+                },
+                labels: {
+                    fontColor: '#ff0000'
+                },
                 scales: {
-                    yAxes: [{
+                    xAxes: [{
+                        gridLines: {
+                            display: false
+                        },
                         ticks: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            fontColor: '#26a2f0',
+                            fontFamily: 'Ubuntu'
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'age',
+                            fontColor: '#26a2f0'
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            display: false
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                            stepSize: 10,
+                            callback: function (value, index, values) {
+                                return value + '%';
+                            },
+                            fontColor: '#26a2f0'
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: '% of user',
+                            fontColor: '#26a2f0'
                         }
                     }]
                 }
@@ -203,26 +218,68 @@ function formSub() {
         var ctx = document.getElementById('myChart2').getContext('2d');
 
         var myChart = new Chart(ctx, {
-            type: 'line',
+            type: 'bar',
             data: {
                 labels: x,
                 datasets: [{
                     label: 'Job Seeker Years of Experience',
                     data: y,
-                    backgroundColor: [
-                        'rgba(38, 162, 240, .2)'
-                    ],
-                    borderColor: [
-                        'rgba(38, 162, 240, 1)'
-                    ],
+                    backgroundColor: '#26a2f0',
+                    borderColor: '#26a2f0',
                     borderWidth: 1
                 }]
             },
             options: {
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem) {
+                            return tooltipItem.yLabel;
+                        }
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Users Experience Distribution',
+                    fontColor: '#26a2f0'
+                },
+                labels: {
+                    fontColor: '#ff0000'
+                },
                 scales: {
-                    yAxes: [{
+                    xAxes: [{
+                        gridLines: {
+                            display: false
+                        },
                         ticks: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            fontColor: '#26a2f0',
+                            fontFamily: 'Ubuntu'
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'experience',
+                            fontColor: '#26a2f0'
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            display: false
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                            stepSize: 10,
+                            callback: function (value, index, values) {
+                                return value + '%';
+                            },
+                            fontColor: '#26a2f0'
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: '% of user',
+                            fontColor: '#26a2f0'
                         }
                     }]
                 }
